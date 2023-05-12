@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap");
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: calc(70vh + 70px);
+}
+main .container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bitter";
+  color: white;
+  font-size: 2em;
+  gap: 2em;
+  margin: 0 1em;
+  flex-wrap: wrap;
+}
+main .container img {
+  height: 10em;
+}
+main .head-text {
+  border-left: 3.5px solid purple;
+  border-radius: 0 5px;
+  width: 50%;
+  text-align: start;
+  padding-left: 0.5em;
+}
+main .head-text span {
+  background-image: linear-gradient(to right, rgb(186, 85, 253), rgb(213, 124, 255));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  main .container {
+    width: 100%;
+    margin: 0 2em;
+    margin-top: 0.2em;
+    font-size: 1.4em;
+    flex-wrap: wrap-reverse;
+  }
+  main .head-text {
+    width: 100%;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e9dd8;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/services.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sersolis Serviços</title>
+  </head>
+  <body>
+    <header class="text-white">
+      <div class="navbar">
+        <div class="logo"><a href="/">Sersolis</a></div>
+        <ul class="links">
+          <li><a href="/">Início</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/services">Serviços</a></li>
+          <!-- <li><a href="/equipe">Equipe</a></li> -->
+        </ul>
+        <a href="" class="action_btn">Servidor</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu ">
+        <li><a href="/">Início</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/services">Serviços</a></li>
+        <!-- <li><a href="/equipe">Equipe</a></li> -->
+        <li><a href="" class="action_btn">Servidor</a></li>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section id="headline">
+          <h3>
+            Veja os nossos serviços, todos feito com maestria e qualidade.
+          </h3>
+        </section>
+        <section id="services">
+          <div class="card">
+            <div class="headline-card">
+              <h2>Criação de servidor</h2>
+              <p>
+                Desenvolvemos um servidor para você a partir do zero, de acordo
+                com as suas necessidades e preferências.
+              </p>
+            </div>
+            <div class="illustration">
+              <span class="material-symbols-outlined"> smb_share </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="headline-card">
+              <h2>Design de banners</h2>
+              <p>
+                Desenvolvemos banners profissionais, de extrema qualidade para o
+                seu servidor, com o tema e especificações que desejar.
+              </p>
+            </div>
+            <div class="illustration">
+              <span class="material-symbols-outlined"> draw </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="headline-card">
+              <h2>Bots personalizados</h2>
+              <p>
+                Desenvolvemos bots totalmente personalizados, programados
+                utilizando a linguagem JavaScript, com funcionalidades sob
+                medida para o seu servidor ter funções únicas.
+              </p>
+            </div>
+            <div class="illustration">
+              <span class="material-symbols-outlined"> smart_toy </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="headline-card">
+              <h2>Criação de sites</h2>
+              <p>
+                Desenvolvemos sites para você que sonha em ter o seu próprio
+                meio de gerenciar o seu negócio, marca ou empresa.
+              </p>
+            </div>
+            <div class="illustration">
+              <span class="material-symbols-outlined"> dashboard </span>
+            </div>
+          </div>
+        </section>
+        <section id="scrollToDown">arrow down</section>
+        <section id="packages"></section>
+      </div>
+    </main>
+
+    <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function() {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+      }
+    </script>
+  </body>
+</html>

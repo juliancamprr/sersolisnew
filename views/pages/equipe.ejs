@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/equipe.css" />
+    <title>Equipe</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="">Sersolis</a></div>
+        <ul class="links">
+          <li><a href="/">Início</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/services">Serviços</a></li>
+          <li><a href="/equipe">Equipe</a></li>
+        </ul>
+        <a
+          href="https://discord.gg/5RBBmsW8Cx"
+          target="_blank"
+          class="action_btn"
+          >Servidor</a
+        >
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="/">Início</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/services">Serviços</a></li>
+        <li><a href="/equipe">Equipe</a></li>
+        <li>
+          <a
+            href="https://discord.gg/5RBBmsW8Cx"
+            target="_blank"
+            class="action_btn"
+            >Servidor</a
+          >
+        </li>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="headline">
+          <div class="headline-main">
+            <h2>Conheça as pessoas por trás da Equipe</h2>
+          </div>
+
+        </section>
+        <section id="team">
+
+          <!-- Loop através do array de usuários -->
+          <% for (const user of users) { %>
+            
+            <div class="card rounded-md bg-violet-900 p-1">
+              <div class="user_image">
+                <img src="<%= user.avatar %>" alt="" class="w-100 rounded-md">
+              </div>
+              <div class="user_content">
+                <div class="name">
+                  <h1><%= user.username %></h1>
+                  <p><%= user.description %></p>
+                  <p><%= user.profession %></p>
+                </div>
+              </div>
+            </div>
+
+          <% } %>
+        </div>
+        </section>
+    </main>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+
+      const bioButtons = document.querySelectorAll(".bio-button");
+
+bioButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const targetId = event.currentTarget.dataset.target;
+    const targetBio = document.getElementById(targetId);
+    targetBio.classList.toggle("active_biography");
+  });
+});
+
+    </script>
+  </body>
+</html>

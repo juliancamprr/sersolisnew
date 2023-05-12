@@ -1,0 +1,74 @@
+$primaryColorText: rgb(213, 124, 255);
+$sndColorText: rgb(186, 85, 253);
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: calc(70vh + 70px);
+
+    .container {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Bitter";
+        // margin-top: 2em;
+        color: white;
+        font-size: 2em;
+        gap: 2em;
+        margin: 0 1em;
+        flex-wrap: wrap;
+
+        img { 
+            height: 10em;
+        }
+    }
+
+    .head-text {
+        border-left: 3.5px solid purple;
+        border-radius: 0 5px;
+        width: 50%;
+        text-align: start;
+        padding-left: .5em;
+    }
+
+    .head-text span {
+        background-image: linear-gradient(to right, $sndColorText, $primaryColorText);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        .container {
+            width: 100%;
+            margin: 0 2em;
+            margin-top: 0.2em;
+            font-size: 1.40em;
+            flex-wrap: wrap-reverse;
+        }
+
+        .head-text {
+            width: 100%;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background:#9d00ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #240051;
+}
